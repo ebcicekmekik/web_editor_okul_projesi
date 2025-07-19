@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #C9D6FF;
+    background: linear-gradient(to right, #C9D6FF, #87CEEB);
+}
+
+.container {
+    background-color: #fff;
+    width: 50%;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group i {
+    position: absolute;
+    top: 1.3rem;
+    left: 1.2rem;
+    color: #757575;
+}
+
+.input-group input {
+    padding: 1.5rem;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+.input-group input:focus {
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid #3279B5;
+}
+
+.input-group label {
+    position: relative;
+    top: 1.3rem;
+    left: 1.2rem;
+    color: #757575;
+    transition: 0.3s;
+}
+
+.input-group label:hover {
+    top: 3rem;
+    color: #3279B5;
+    font-size: 15px;
+}
+
+.button {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #125125;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0701F5;
+}
+
+.recover {
+    text-align: right;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.recover a {
+    text-decoration: none;
+    color: #125125;
+}
+
+.recover a:hover {
+    text-decoration: underline;
+    color: #0701F5;
+}
+
+.icons {
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    border-radius: 10px;
+    background-color: #125125;
+    color: #fff;
+    cursor: pointer;
+}
+
+.icons:hover {
+    background-color: #0701F5;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.links a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #125125;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: #0701F5;
+}
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+}
+
+.menu__bar{
+    background-color: #5C5E70;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.menu__bar ul{
+    list-style: none;
+    display: flex;
+}
+
+.menu__bar ul li{
+    padding: 10px 30px;
+    position: relative;
+}
+
+.menu__bar ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dropdown__menu{
+    display: none;
+}
+
+.menu__bar ul li:hover .dropdown__menu{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #5C5E70;
+    z-index: 1000;
+}
+
+.dropdown__menu ul{
+    display: block;
+    margin: 10px;
+}
+
+.dropdown__menu ul li{
+    width: 150px;
+    padding: 10px;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #5C5E70;
+    padding: 30px;
+}
+
+.container form{
+    width: 270px;
+    margin-right: 30px;
+}
+
+.container form h2{
+    color: white;
+    margin-bottom: 20px;
+    font-family: "Anta", sans-serif;
+}
+
+.container form input{
+    border: none;
+    outline: none;
+    border: 0;
+    width: 100%;
+    border-bottom: 2px solid black;
+    margin-bottom: 25px;
+    padding: 7px 0;
+    font-size: 14px;
+}
+
+.container form button{
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: "Anta", sans-serif;
+} */

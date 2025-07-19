@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eren berat</title>
+    <link rel="stylesheet" href="panel.css" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+<script>
+// Haber ekleme işlevi
+function haberEkle() {
+    // Formdaki değerleri al
+    var baslik = document.getElementById("baslik").value;
+    var tarih = document.getElementById("tarih").value;
+    var resimURL = document.getElementById("resimURL").value;
+    var aciklama = document.getElementById("aciklama").value;
+
+    // Yeni bir haber öğesi oluştur
+    var haberDiv = document.createElement("div");
+    haberDiv.classList.add("haber");
+
+    var haberHTML = `
+        <h2>${baslik}</h2>
+        <p><strong>Tarih:</strong> ${tarih}</p>
+        <img src="${resimURL}" alt="${baslik}">
+        <p>${aciklama}</p>
+    `;
+    haberDiv.innerHTML = haberHTML;
+
+    // Haberleri gösterim alanına ekle
+    var haberlerDiv = document.getElementById("haberler");
+    haberlerDiv.appendChild(haberDiv);
+
+    // Formu sıfırla
+    document.getElementById("haberForm").reset();
+}
+
+// Form gönderildiğinde haberEkle işlevini çağır
+document.getElementById("haberForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
+    haberEkle();
+});
+
+
+</script>
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>Eren Berat Çiçekmekik</header>
+      <a href="haber.html"  class="active">
+        <i class="fa-regular fa-newspaper"></i>
+        <span>Haber</span>
+      </a>
+      <a href="duyuru.html ">
+        <i class="fa-solid fa-bullhorn"></i>
+        <span>Duyuru</span>
+      </a>
+      <a href="anasayfa.html">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Çıkış yap</span>
+      </a>
+
+    </div>
+    <div class="container">
+        <div class="text">
+            HABER EKLEME
+        </div>
+        <form action="#">
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label for="">Başlık</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="date" name="" id="">
+                    <div class="underline"></div>
+                    <label for="">Tarih</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <div class="file-upload">
+                        <div class="file-select">
+                          <div class="file-select-button" id="fileName">Resim Seç</div>
+                          <input type="file" name="chooseFile" id="chooseFile">
+                        </div>
+                      </div>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="input-data textarea">
+                    <textarea rows="8" cols="80" required></textarea>
+                    <br />
+                    <div class="underline"></div>
+                    <label for="">Açıklama</label>
+                    <br />
+                    <div class="form-row submit-btn">
+                        <div class="input-data">
+                            <div class="inner"></div>
+                            <input type="submit" value="EKLE">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="haberler">
+    
+    </div>
+</body>
+
+<script src="script.js"></script>
+</html>

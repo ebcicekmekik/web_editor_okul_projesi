@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haber Formu</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .card {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container mt-3">
+        <form id="cardForm">
+            <div class="form-group">
+                <label for="title">Başlık</label>
+                <input type="text" class="form-control" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Açıklama</label>
+                <textarea class="form-control" id="description" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kart Ekle</button>
+        </form>
+        <div class="row">
+            <!-- Buraya kartlar eklenecek -->
+        </div>
+    </div>
+
+  <script>
+    // Sayfa yüklendiğinde localStorage'dan veriyi al ve kartları oluştur
+document.addEventListener('DOMContentLoaded', function() {
+    const cardDiv = document.querySelector('.row');
+    const cardsHTML = localStorage.getItem('cards');
+
+    if (cardsHTML) {
+        cardDiv.innerHTML = cardsHTML;
+    }
+
+    // Kart ekleme formunu seç
+    const form = document.getElementById('cardForm');
+
+    // Form gönderildiğinde
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Sayfanın yenilenmesini engelle
+
+        // Input değerlerini al
+        const title = document.getElementById('title').value;
+        const description = document.getElementById('description').value;
+
+        // Yeni bir kart oluştur
+        const newCard = document.createElement('div');
+        newCard.classList.add('col-md-4');
+        newCard.innerHTML = 
+            <div class="card w-100" style="width: 14rem;">
+                <div class="card-body">
+                    <h5 class="card-title">${title}</h5>
+                    <p class="card-text">${description}</p>
+                    <button class="btn btn-danger delete-btn">Sil</button>
+                </div>
+            </div>
+        ;
+
+        // Kartları içeren div'e yeni kartı ekle
+        cardDiv.appendChild(newCard);
+
+        // localStorage'a eklemek için veriyi al
+        const cardsHTML = cardDiv.innerHTML;
+
+        // localStorage'a kaydet
+        localStorage.setItem('cards', cardsHTML);
+
+        // Formu temizle
+        form.reset();
+    });
+
+    // Silme düğmelerini dinle
+    cardDiv.addEventListener('click', function(event) {
+        if (event.target.classList.contains('delete-btn')) {
+            const card = event.target.closest('.col-md-4');
+            card.remove(); // Tıklanan kartı sil
+
+            // localStorage'daki veriyi güncelle
+            localStorage.setItem('cards', cardDiv.innerHTML);
+        }
+    });
+});
+  </script>
+</body>
+</html>

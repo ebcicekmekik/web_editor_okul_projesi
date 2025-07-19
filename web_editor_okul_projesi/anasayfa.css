@@ -1,0 +1,131 @@
+*{
+    color: black;
+    font-size: 21px;
+    font-family: "Kelly Slab", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.navbar-dark .navbar-nav a.nav-link {
+    color: #1f1d2d;
+    font-size: 1.1em;
+  }
+  .dropdown-menu {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border: none;
+    border-radius: 0;
+    padding: 0.7em;
+  }
+   @media only screen and (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+      display: flex;
+    }
+    .dropdown-menu.show {
+      display: flex;
+    } 
+   } 
+  .dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  .dropdown-menu li .dropdown-item {
+    color: #000000;
+    font-size: 1em;
+    padding: 0.5em 1em;
+  }
+  .dropdown-menu li .dropdown-item:hover {
+    background-color: #babdde;
+  }
+  .dropdown-menu li:first-child a {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #1f1d2d;
+  }
+  .dropdown-menu li:first-child a:hover {
+    background-color: #babdde;
+  }
+  @media only screen and (max-width: 992px) {
+    .dropdown-menu.show {
+      flex-wrap: wrap;
+      max-height: 350px;
+      overflow-y: scroll;
+    }
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1140px) {
+    .dropdown:hover .dropdown-menu {
+      width: 40vw;
+      flex-wrap: wrap;
+    }
+  }
+.nav-item{
+    padding-left: 3px;
+  }
+.c-item{
+    height: 300px;
+}
+.c-img{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+.carousel{
+    top: 10px;
+left: 25%;
+}
+
+
+
+.service-categories {
+    padding-top: 1em;
+    padding-bottom: 3em;
+    background-size: cover;
+    text-align: center;
+  }
+  
+  
+
+  
+  .service-categories .card {
+    transition: all 0.4s;
+  }
+  
+  .service-categories .card-title {
+    padding-top: 0.5em;
+  }
+  
+  .service-categories a:hover {
+    text-decoration: none;
+  }
+  
+ 
+  .service-card:hover {
+    background: #babdde;
+    box-shadow: 2px 4px 8px 0px rgba(46, 61, 73, 0.2)
+  }
+  
+  
+.btn-buton{
+  background-color: #676984!important;
+  color: white!important;
+  margin-bottom: 3px!important;
+}
+.btn-buton:hover{
+  background-color: #ff0000!important;
+  color: white!important;
+}
+.hakkımız{
+  width:25px;
+  padding:20px;
+  margin-left:500px;
+}
+
+.contain {
+  object-fit: contain;
+  width: 500px;
+  height: 500px;
+  }
+
+
+
